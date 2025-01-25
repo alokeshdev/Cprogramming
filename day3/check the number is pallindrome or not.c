@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
     int n,r,rev=0,p;
-    printf("enter the number to reverse the digit:");
+    printf("enter the number to check for pallindrome:");
     scanf("%d",&n);
     p=n;
     while(0<n){

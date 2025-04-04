@@ -1,0 +1,26 @@
+#include <stdio.h> #include <string.h>
+
+int main() { // List of stations on the Sealdah to Naihati route
+char *stations[] = {"Sealdah", "Bidhan Nagar", "Dum Dum", "Belgharia", "Agarpara", "Sodepur", "Khardaha", "Titagarh", "Barrackpore", "Palta", "Ichhapur", "Shyamnagar", "Jagaddal", "Kankinara", "Naihati"}; 
+int num_stations = sizeof(stations) / sizeof(stations[0]);
+
+char current_station[50];
+printf("Enter the current station name: ");
+scanf("%49s", current_station);
+
+// Check if Kritika has reached Barrackpore
+for (int i = 0; i < num_stations; i++) {
+    if (strcmp(current_station, stations[i]) == 0) {
+        if (strcmp(current_station, "Barrackpore") == 0) {
+            printf("Yes, Kritika has reached Barrackpore.\n");
+        } else {
+            printf("No, Kritika is at %s and has not yet reached Barrackpore.\n", current_station);
+        }
+        return 0;
+    }
+}
+
+printf("Invalid station name entered. Please check the spelling.\n");
+return 0;
+
+}
